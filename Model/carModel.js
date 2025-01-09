@@ -1,16 +1,18 @@
 
-import {Schema,model } from "mongoose";
+import { Schema, model } from "mongoose";
 
-const carSchema = new Schema ({
-    brandName : String,
-    modelName : String,
-    year : Number,
-    color : String,
-    isBrandNew : Boolean
+const carSchema = new Schema({
+    brandName: String,
+    modelName: String,
+    year: Number,
+    color: String,
+    isBrandNew: Boolean
+}, {
+    versionKey: false
 })
 
 
 
 
 
-export const carModel =model("cars",carSchema)
+export const carModel = model("cars", carSchema)
